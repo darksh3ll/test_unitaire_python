@@ -50,14 +50,23 @@ def generate_list_numbers(number: int) -> list:
     :return: list
     """
     outpout = []
-    for i in range(1, number+1):
+    for i in range(1, number + 1):
         outpout.append(i)
     return outpout
 
 
-def is_palindrome(chaine: str) -> bool:
-    return chaine == "".join(reversed(chaine))
+def is_palindrome(chaine: str) -> bool | None:
+    try:
+        return chaine == "".join(reversed(chaine))
+    except TypeError:
+        return None
 
 
-def get_sum_of_digits(num: int) -> int:
-    return sum([int(x) for x in list(str(num))])
+def get_sum_of_digits(num: str) -> int | None:
+    try:
+        return sum([int(x) for x in list(str(num))])
+    except ValueError:
+        return None
+
+
+print(get_sum_of_digits("aaaaa"))

@@ -33,6 +33,7 @@ def test_remove_consecutive_duplicates():
     ("abc", False),
     ("abab", False),
     ("kayak", True),
+    (123, None),
 ])
 def test_is_palidrome(maybe_palindrome, expected_result):
     assert is_palindrome(maybe_palindrome) == expected_result
@@ -41,6 +42,7 @@ def test_is_palidrome(maybe_palindrome, expected_result):
 @pytest.mark.parametrize("string, expected_result", [
     ("123", 6),
     ("223", 7),
+    ("aaa", None),
 ])
 def test_get_sum_of_digits(string, expected_result):
     assert get_sum_of_digits(string) == expected_result
