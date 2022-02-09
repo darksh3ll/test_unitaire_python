@@ -44,11 +44,6 @@ def remove_consecutive_duplicates(s: str) -> str:
 
 
 def generate_list_numbers(number: int) -> list:
-    """
-
-    :param number: int
-    :return: list
-    """
     outpout = []
     for i in range(1, number + 1):
         outpout.append(i)
