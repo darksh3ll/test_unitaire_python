@@ -1,4 +1,4 @@
-from main import adition, invert_chaine, is_multiple_two,remove_consecutive_duplicates
+from main import adition, invert_chaine, is_multiple_two, remove_consecutive_duplicates, generate_list_numbers
 import pytest
 
 
@@ -15,6 +15,10 @@ def test_array_contains_numbers_pair():
 
 
 def test_remove_consecutive_duplicates():
-    enter ="alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta"
+    enter = "alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta"
     exit = "alpha beta gamma delta alpha beta gamma delta"
     assert remove_consecutive_duplicates(enter) == exit
+
+
+def test_generate_list_numbers():
+    assert generate_list_numbers(3) == [1, 2, 3]
