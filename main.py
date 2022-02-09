@@ -41,3 +41,11 @@ def remove_consecutive_duplicates(s: str) -> str:
         if i != r[-1]:
             r.append(i)
     return " ".join(r)
+
+
+def is_palindrome(chaine: str) -> bool:
+    return chaine == "".join(reversed(chaine))
+
+
+def get_sum_of_digits(num: int) -> int:
+    return sum([int(x) for x in list(str(num))])
