@@ -55,3 +55,9 @@ def generate_list_numbers(number: int) -> list:
     return outpout
 
 
+def is_palindrome(chaine: str) -> bool:
+    return chaine == "".join(reversed(chaine))
+
+
+def get_sum_of_digits(num: int) -> int:
+    return sum([int(x) for x in list(str(num))])
